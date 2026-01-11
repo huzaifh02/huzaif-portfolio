@@ -1,0 +1,15 @@
+https://www.kubeblogs.com/how-to-securely-expose-your-applications-using-cloudflare-tunnel-step-by-step-guide/
+https://www.kubeblogs.com/enterprise-aws-backup-implementation-compliance-policies-monitoring-and-data-protection/
+https://www.kubeblogs.com/how-choosing-the-right-aws-instances-can-cut-your-cloud-bill-in-half-the-graviton-advantage/
+https://www.kubeblogs.com/ec2-or-fargate/
+https://www.kubeblogs.com/act-for-github-actions/
+https://www.kubeblogs.com/how-to-create-a-custom-healthy-backend-count-metric-in-gcp-fixing-the-aws-healthyhostcount-gap/
+https://www.kubeblogs.com/how-to-deploy-new-images-in-a-vm-without-ssh-secure-container-deployment/
+https://www.kubeblogs.com/how-to-avoid-github-token-rate-limiting-issues-complete-guide-for-devops-teams/
+https://www.kubeblogs.com/how-to-deploy-aws-lambda-functions-using-github-actions-complete-ci-cd-automation-guide/
+
+
+
+##Podcasts
+https://youtu.be/YEMvDCbbolA?si=p5CW0jhBC-tOXfHL
+https://youtu.be/OPLRZofmN20?si=YJLtOwohytKpJKnZ

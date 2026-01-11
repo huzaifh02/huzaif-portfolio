@@ -1,0 +1,33 @@
+[
+  {
+    "id": "1",
+    "title": "Terraform for Cloud State Management",
+    "description": "Provisioned AWS infrastructure (VPCs, EC2, S3, Elasticache, Amazon MQ, Beanstalk, CloudFront) using Terraform for efficient cloud state management.",
+    "tags": ["Terraform", "AWS", "Infrastructure as Code"],
+    "image": "/project-1.jpg",
+    "link": "https://huzaifh02.hashnode.dev/terraform-for-cloud-state-management-simplifying-infrastructure-as-code#heading-architecture-and-tools-used"
+  },
+  {
+    "id": "2",
+    "title": "CI/CD DevSecOps Pipeline",
+    "description": "Developed a comprehensive CI/CD pipeline with Jenkins, integrating Trivy, SonarQube, Docker, Kubernetes, and Grafana for DevOps and monitoring.",
+    "tags": ["Jenkins", "Docker", "Kubernetes", "Grafana", "DevSecOps"],
+    "image": "/project-2.jpg",
+    "link": "https://huzaifh02.hashnode.dev/complete-cicd-using-jenkins-devsecops-project-with-sonar-nexus-docker-kubernetes-and-monitoring-tools"
+  },
+  {
+    "id": "3",
+    "title": "Platform Miniapps (Beta)",
+    "description": "Built internal Platform Miniapps using Streamlit to enable teams to self-manage operational workflows and Kubernetes operations.",
+    "tags": ["Python", "Streamlit", "Kubernetes", "Platform Engineering"],
+    "image": "/project-3.jpg"
+  },
+  {
+    "id": "4",
+    "title": "Custom Monitoring & Alerting Platform",
+    "description": "Designed and deployed custom monitoring solution involving Prometheus, Alertmanager, RabbitMQ exporter on production clusters with Grafana dashboards.",
+    "tags": ["Prometheus", "Alertmanager", "Grafana", "Observability"],
+    "image": "/project-4.jpg"
+  }
+]
+

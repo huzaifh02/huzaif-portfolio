@@ -1,0 +1,39 @@
+[
+  {
+    "id": "1",
+    "date": "2024-12-02",
+    "title": "Order Management Migration & Platform Miniapps",
+    "description": "Migrated Order-mgmt from ECS to EKS end-to-end with CI/CD. Shipped Platform Miniapps beta enabling team self-service. Created resource isolation in EKS using Taints, Tolerations, and Node Selectors."
+  },
+  {
+    "id": "2",
+    "date": "2024-11-13",
+    "title": "Legacy Miniapps Migration & GitHub Actions Overhaul",
+    "description": "Migrated Legacy Miniapps Application end-to-end from EC2 to ECS with rollback mechanisms and CI/CD. Created unified GH action for KEDA operations. Deployed custom monitoring solution with Prometheus, Alertmanager, and RabbitMQ exporter."
+  },
+  {
+    "id": "3",
+    "date": "2024-09-28",
+    "title": "GKE Implementation & Cloud Functions Migration",
+    "description": "Worked on GKE implementation with KEDA end-to-end including custom monitoring dashboards, alerts (NAT, CPU, MEM, LB), Helm charts, and GitHub Actions. Migrated 387 Cloud Functions from Gen1 to Gen2 with <2min downtime."
+  },
+  {
+    "id": "4",
+    "date": "2024-09-01",
+    "title": "Joined Kubenine Consulting",
+    "description": "Started as Platform Engineer, focusing on Kubernetes platforms, CI/CD engineering, and cloud infrastructure. Began contributing to Kubeblogs and learning Python/Streamlit."
+  },
+  {
+    "id": "5",
+    "date": "2024-08-20",
+    "title": "Performance Review - Major Wins",
+    "description": "Delivered high-quality work for Klarity migrations without missing deadlines. Created futuristic GH Actions pipeline. Expanded skills from DevOps to content creation, business knowledge, and platform engineering."
+  },
+  {
+    "id": "6",
+    "date": "2023-01-01",
+    "title": "DevOps Engineer at Guillotine Media",
+    "description": "Supported multiple AWS production environments with 99.9% uptime. Built CI/CD pipelines reducing deployment time by 50%. Migrated stateful workloads from EC2 to ECS using EFS-backed persistence."
+  }
+]
+
