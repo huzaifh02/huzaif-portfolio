@@ -54,14 +54,14 @@ const blogs = [
 
 const podcasts = [
   {
-    title: 'Platform Engineering Deep Dive',
-    url: 'https://youtu.be/YEMvDCbbolA?si=p5CW0jhBC-tOXfHL',
-    duration: 'Episode 1',
+    title: 'Cloudflare Freemium Model Explained',
+    videoId: 'YEMvDCbbolA',
+    episode: 'Episode 1',
   },
   {
-    title: 'Cloud Infrastructure Insights',
-    url: 'https://youtu.be/OPLRZofmN20?si=YJLtOwohytKpJKnZ',
-    duration: 'Episode 2',
+    title: 'GitHub Actions vs Jenkins',
+    videoId: 'OPLRZofmN20',
+    episode: 'Episode 2',
   },
 ];
 
@@ -70,42 +70,66 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-6 py-24 md:py-32">
-        <div className="flex items-center gap-2 mb-6">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium">
-            <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
-            Available for work
-          </span>
-        </div>
-        
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-[1.1]">
-          Building reliable<br />
-          <span className="gradient-text">cloud platforms</span>
-        </h1>
-        
-        <p className="text-xl text-neutral-400 leading-relaxed mb-10 max-w-2xl">
-          I design, build, and operate internal platforms on AWS and GCP. 
-          Specializing in Kubernetes, CI/CD, and production observability.
-        </p>
-        
-        <div className="flex flex-wrap gap-4">
-          <Link
-            href="/portfolio"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-black font-semibold rounded-lg transition-all hover:scale-105 glow-sm"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-            </svg>
-            View Work
-          </Link>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-neutral-700 hover:border-orange-500/50 text-white rounded-lg transition-all hover:bg-neutral-800"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            Get in Touch
-          </Link>
+        <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-12">
+          {/* Profile Photo */}
+          <div className="flex-shrink-0">
+            <div className="relative">
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-2 border-orange-500/30 glow">
+                <img
+                  src="/profile.jpg"
+                  alt="Huzaif Shah"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Status indicator */}
+              <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-neutral-900 rounded-full flex items-center justify-center border-2 border-neutral-800">
+                <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
+              </div>
+            </div>
+          </div>
+          
+          {/* Hero Content */}
+          <div className="flex-1">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium">
+                <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
+                Available for work
+              </span>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight leading-[1.1]">
+              Huzaif Shah
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-neutral-400 mb-4">
+              Building reliable <span className="gradient-text font-semibold">cloud platforms</span>
+            </p>
+            
+            <p className="text-neutral-500 leading-relaxed mb-6 max-w-xl">
+              Platform Engineer specializing in Kubernetes, AWS/GCP, CI/CD, and production observability.
+            </p>
+            
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/portfolio"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-orange-500 hover:bg-orange-600 text-black font-semibold rounded-lg transition-all hover:scale-105 glow-sm text-sm"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                </svg>
+                View Work
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-neutral-700 hover:border-orange-500/50 text-white rounded-lg transition-all hover:bg-neutral-800 text-sm"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Get in Touch
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -214,33 +238,42 @@ export default function Home() {
         <div className="flex items-center gap-3 mb-8">
           <div className="p-2 rounded-lg bg-orange-500/10">
             <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
           </div>
-          <h2 className="text-2xl font-bold text-white">Podcasts</h2>
+          <h2 className="text-2xl font-bold text-white">Videos</h2>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-6">
           {podcasts.map((podcast) => (
-            <a
-              key={podcast.url}
-              href={podcast.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-4 p-5 bg-neutral-900/50 border border-neutral-800 rounded-xl hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all"
+            <div
+              key={podcast.videoId}
+              className="bg-neutral-900/50 border border-neutral-800 rounded-xl overflow-hidden hover:border-orange-500/50 transition-all"
             >
-              <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center glow-sm">
-                <svg className="w-7 h-7 text-black" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
+              {/* Video Embed */}
+              <div className="relative w-full aspect-video">
+                <iframe
+                  src={`https://www.youtube.com/embed/${podcast.videoId}`}
+                  title={podcast.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
               </div>
-              <div>
-                <span className="text-xs text-orange-400 font-medium">{podcast.duration}</span>
-                <h3 className="text-neutral-200 group-hover:text-white transition-colors font-medium">
+              
+              {/* Video Info */}
+              <div className="p-4">
+                <span className="inline-flex items-center gap-1 text-xs text-orange-400 font-medium mb-1">
+                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                  {podcast.episode}
+                </span>
+                <h3 className="text-white font-medium">
                   {podcast.title}
                 </h3>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </section>
