@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { getProjects } from '@/lib/content';
+import ProjectCard from '@/components/ProjectCard';
 
 const skills = [
   { name: 'Kubernetes', icon: '⎈' },
@@ -11,45 +13,6 @@ const skills = [
   { name: 'Grafana', icon: '📈' },
   { name: 'Python', icon: '🐍' },
   { name: 'Helm', icon: '⛵' },
-];
-
-const blogs = [
-  {
-    title: 'Securely Expose Apps Using Cloudflare Tunnel',
-    url: 'https://www.kubeblogs.com/how-to-securely-expose-your-applications-using-cloudflare-tunnel-step-by-step-guide/',
-  },
-  {
-    title: 'Enterprise AWS Backup Implementation',
-    url: 'https://www.kubeblogs.com/enterprise-aws-backup-implementation-compliance-policies-monitoring-and-data-protection/',
-  },
-  {
-    title: 'The Graviton Advantage: Cut Your Cloud Bill in Half',
-    url: 'https://www.kubeblogs.com/how-choosing-the-right-aws-instances-can-cut-your-cloud-bill-in-half-the-graviton-advantage/',
-  },
-  {
-    title: 'EC2 or Fargate?',
-    url: 'https://www.kubeblogs.com/ec2-or-fargate/',
-  },
-  {
-    title: 'Act for GitHub Actions',
-    url: 'https://www.kubeblogs.com/act-for-github-actions/',
-  },
-  {
-    title: 'Custom Healthy Backend Count Metric in GCP',
-    url: 'https://www.kubeblogs.com/how-to-create-a-custom-healthy-backend-count-metric-in-gcp-fixing-the-aws-healthyhostcount-gap/',
-  },
-  {
-    title: 'Deploy New Images in a VM Without SSH',
-    url: 'https://www.kubeblogs.com/how-to-deploy-new-images-in-a-vm-without-ssh-secure-container-deployment/',
-  },
-  {
-    title: 'Avoid GitHub Token Rate Limiting Issues',
-    url: 'https://www.kubeblogs.com/how-to-avoid-github-token-rate-limiting-issues-complete-guide-for-devops-teams/',
-  },
-  {
-    title: 'Deploy AWS Lambda Using GitHub Actions',
-    url: 'https://www.kubeblogs.com/how-to-deploy-aws-lambda-functions-using-github-actions-complete-ci-cd-automation-guide/',
-  },
 ];
 
 const podcasts = [
@@ -65,7 +28,9 @@ const podcasts = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const projects = await getProjects();
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -171,64 +136,32 @@ export default function Home() {
         <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-6 md:p-8">
           <div className="space-y-4 text-neutral-400 leading-relaxed">
             <p>
-              Platform Engineer with <span className="text-orange-400 font-medium">3+ years of experience</span>. 
-              I specialize in Kubernetes (EKS, GKE), CI/CD platform engineering, 
-              Infrastructure as Code, and production observability.
+              I'm a Platform Engineer with <span className="text-orange-400 font-medium">2+ years of experience</span> building and operating cloud infrastructure. 
+              I work with Kubernetes (EKS, GKE), CI/CD pipelines, Infrastructure as Code, and production monitoring.
             </p>
             <p>
-              I focus on enabling developer productivity through reliable, 
-              scalable infrastructure. I've led cloud migrations, built developer 
-              tooling, and designed reliability-focused platforms.
+              I focus on making infrastructure reliable and easy to use. I've led cloud migrations, built deployment tooling, 
+              and written documentation so teams can operate systems independently. When I'm not working, you'll find me 
+              playing football, chess, or trekking in the mountains of Kashmir.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Writing Section */}
+      {/* Projects Section */}
       <section className="max-w-4xl mx-auto px-6 py-16">
         <div className="flex items-center gap-3 mb-8">
           <div className="p-2 rounded-lg bg-orange-500/10">
             <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
             </svg>
           </div>
-          <h2 className="text-2xl font-bold text-white">Writing</h2>
-          <a 
-            href="https://www.kubeblogs.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="ml-auto text-sm text-orange-400 hover:text-orange-300 flex items-center gap-1"
-          >
-            View all on KubeBlogs
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </a>
+          <h2 className="text-2xl font-bold text-white">Projects</h2>
         </div>
         
-        <div className="grid gap-3">
-          {blogs.map((blog) => (
-            <a
-              key={blog.url}
-              href={blog.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-between p-4 bg-neutral-900/50 border border-neutral-800 rounded-xl hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all"
-            >
-              <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-orange-500/10 group-hover:bg-orange-500/20 transition-colors">
-                  <svg className="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                </div>
-                <span className="text-neutral-300 group-hover:text-white transition-colors">
-                  {blog.title}
-                </span>
-              </div>
-              <svg className="w-5 h-5 text-neutral-600 group-hover:text-orange-500 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
+        <div className="grid gap-6">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </section>
@@ -275,6 +208,81 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Personal Section */}
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <div className="flex items-center gap-3 mb-8">
+          <div className="p-2 rounded-lg bg-orange-500/10">
+            <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <h2 className="text-2xl font-bold text-white">Beyond Code</h2>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Location & Nature */}
+          <div className="p-6 bg-neutral-900/50 border border-neutral-800 rounded-xl">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 rounded-lg bg-orange-500/10">
+                <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white">Kashmir, India</h3>
+            </div>
+            <p className="text-neutral-400 leading-relaxed">
+              I live in Kashmir and love nature. When time permits, I go trekking and have covered several alpine lakes in the region. The mountains keep me grounded.
+            </p>
+          </div>
+
+          {/* Football */}
+          <div className="p-6 bg-neutral-900/50 border border-neutral-800 rounded-xl">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 rounded-lg bg-orange-500/10">
+                <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white">Football</h3>
+            </div>
+            <p className="text-neutral-400 leading-relaxed mb-2">
+              I love football and have been a semi-professional player during both college and school. It's been a big part of my life and taught me teamwork and discipline.
+            </p>
+          </div>
+
+          {/* Chess */}
+          <div className="p-6 bg-neutral-900/50 border border-neutral-800 rounded-xl">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 rounded-lg bg-orange-500/10">
+                <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white">Chess</h3>
+            </div>
+            <p className="text-neutral-400 leading-relaxed">
+              I play chess as a hobby on chess.com. Currently rated around 1300 - always working on improving my game. It helps me think strategically, which translates well to infrastructure planning.
+            </p>
+          </div>
+
+          {/* Trekking */}
+          <div className="p-6 bg-neutral-900/50 border border-neutral-800 rounded-xl">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 rounded-lg bg-orange-500/10">
+                <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white">Trekking</h3>
+            </div>
+            <p className="text-neutral-400 leading-relaxed">
+              When time permits, I go for treks in Kashmir. I've covered several alpine lakes in the region. There's something about being in nature that helps me reset and think clearly.
+            </p>
+          </div>
         </div>
       </section>
 
