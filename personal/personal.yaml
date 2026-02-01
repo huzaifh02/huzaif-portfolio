@@ -1,0 +1,27 @@
+personal_interests:
+  sports:
+    football:
+      description: "Love football and have been a semi-professional player"
+      experience:
+        - "Semi-pro player during college"
+        - "Semi-pro player during school"
+      passion_level: "high"
+  
+  hobbies:
+    chess:
+      description: "Play chess as a hobby"
+      platform: "chess.com"
+      rating: 1300
+      skill_level: "intermediate"
+  
+  location:
+    current_location: "Kashmir, India"
+    connection_to_location: "Live in Kashmir and love nature"
+  
+  outdoor_activities:
+    trekking:
+      description: "Go for treks when time permits"
+      experience:
+        - "Covered several alpine lakes in Kashmir"
+      interest: "nature and outdoor exploration"
+      frequency: "when time permits"
