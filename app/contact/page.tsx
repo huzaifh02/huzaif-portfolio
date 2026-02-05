@@ -21,26 +21,20 @@ const socialLinks = [
 
 export default function ContactPage() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-24 md:py-32">
+    <div className="max-w-5xl mx-auto px-6 py-24 md:py-32">
       <div className="mb-12">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="p-2 rounded-lg bg-orange-500/10">
-            <svg className="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white">Get in Touch</h1>
-        </div>
-        <p className="text-neutral-400 text-lg">
-          Open to discussing platform engineering opportunities.
+        <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)] mb-3">Contact</p>
+        <h1 className="text-3xl md:text-4xl font-display text-[var(--foreground)]">Let’s connect</h1>
+        <p className="text-[var(--muted)] text-lg mt-3 max-w-2xl">
+          Open to discussing platform engineering, DevOps, and reliability-focused work.
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
         {/* Contact Card */}
-        <div className="p-6 bg-neutral-900/50 border border-neutral-800 rounded-xl">
-          <h2 className="flex items-center gap-2 text-lg font-semibold text-white mb-6">
-            <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="p-6 surface-card rounded-2xl">
+          <h2 className="flex items-center gap-2 text-lg font-semibold text-[var(--foreground)] mb-6">
+            <svg className="w-5 h-5 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>
             Contact Info
@@ -49,53 +43,53 @@ export default function ContactPage() {
           <div className="space-y-4">
             <a
               href={`mailto:${contactInfo.email}`}
-              className="flex items-center gap-4 p-4 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 border border-neutral-700 hover:border-orange-500/50 transition-all group"
+              className="flex items-center gap-4 p-4 rounded-xl bg-[var(--surface-2)] hover:bg-[var(--surface-1)] border border-[var(--border)] hover:border-[var(--border-strong)] transition-all group"
             >
-              <div className="p-2 rounded-lg bg-orange-500/10 group-hover:bg-orange-500/20 transition-colors">
-                <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="p-2 rounded-lg bg-[rgba(255,179,71,0.12)] group-hover:bg-[rgba(255,179,71,0.2)] transition-colors">
+                <svg className="w-5 h-5 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
               <div>
-                <div className="text-xs text-neutral-500 mb-1">Email</div>
-                <div className="text-white group-hover:text-orange-400 transition-colors">{contactInfo.email}</div>
+                <div className="text-xs text-[var(--muted)] mb-1">Email</div>
+                <div className="text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors">{contactInfo.email}</div>
               </div>
             </a>
             
             <a
               href={`tel:${contactInfo.phone}`}
-              className="flex items-center gap-4 p-4 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 border border-neutral-700 hover:border-orange-500/50 transition-all group"
+              className="flex items-center gap-4 p-4 rounded-xl bg-[var(--surface-2)] hover:bg-[var(--surface-1)] border border-[var(--border)] hover:border-[var(--border-strong)] transition-all group"
             >
-              <div className="p-2 rounded-lg bg-orange-500/10 group-hover:bg-orange-500/20 transition-colors">
-                <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="p-2 rounded-lg bg-[rgba(255,179,71,0.12)] group-hover:bg-[rgba(255,179,71,0.2)] transition-colors">
+                <svg className="w-5 h-5 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
               </div>
               <div>
-                <div className="text-xs text-neutral-500 mb-1">Phone</div>
-                <div className="text-white group-hover:text-orange-400 transition-colors">{contactInfo.phone}</div>
+                <div className="text-xs text-[var(--muted)] mb-1">Phone</div>
+                <div className="text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors">{contactInfo.phone}</div>
               </div>
             </a>
             
-            <div className="flex items-center gap-4 p-4 rounded-lg bg-neutral-800/50 border border-neutral-700">
-              <div className="p-2 rounded-lg bg-orange-500/10">
-                <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="flex items-center gap-4 p-4 rounded-xl bg-[var(--surface-2)] border border-[var(--border)]">
+              <div className="p-2 rounded-lg bg-[rgba(255,179,71,0.12)]">
+                <svg className="w-5 h-5 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
               <div>
-                <div className="text-xs text-neutral-500 mb-1">Location</div>
-                <div className="text-white">{contactInfo.location}</div>
+                <div className="text-xs text-[var(--muted)] mb-1">Location</div>
+                <div className="text-[var(--foreground)]">{contactInfo.location}</div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Social Links */}
-        <div className="p-6 bg-neutral-900/50 border border-neutral-800 rounded-xl">
-          <h2 className="flex items-center gap-2 text-lg font-semibold text-white mb-6">
-            <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="p-6 surface-card rounded-2xl">
+          <h2 className="flex items-center gap-2 text-lg font-semibold text-[var(--foreground)] mb-6">
+            <svg className="w-5 h-5 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
             </svg>
             Connect
@@ -108,17 +102,17 @@ export default function ContactPage() {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 border border-neutral-700 hover:border-orange-500/50 transition-all group"
+                className="flex items-center gap-4 p-4 rounded-xl bg-[var(--surface-2)] hover:bg-[var(--surface-1)] border border-[var(--border)] hover:border-[var(--border-strong)] transition-all group"
               >
-                <div className="p-2 rounded-lg bg-orange-500/10 group-hover:bg-orange-500/20 transition-colors">
-                  <svg className="w-5 h-5 text-orange-500" fill={link.fill ? "currentColor" : "none"} stroke={link.fill ? "none" : "currentColor"} viewBox="0 0 24 24">
+                <div className="p-2 rounded-lg bg-[rgba(255,179,71,0.12)] group-hover:bg-[rgba(255,179,71,0.2)] transition-colors">
+                  <svg className="w-5 h-5 text-[var(--accent)]" fill={link.fill ? "currentColor" : "none"} stroke={link.fill ? "none" : "currentColor"} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={link.icon} />
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <div className="text-white group-hover:text-orange-400 transition-colors font-medium">{link.name}</div>
+                  <div className="text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors font-medium">{link.name}</div>
                 </div>
-                <svg className="w-5 h-5 text-neutral-600 group-hover:text-orange-500 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-[var(--muted)] group-hover:text-[var(--accent)] group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
@@ -126,13 +120,13 @@ export default function ContactPage() {
           </div>
           
           {/* Quick CTA */}
-          <div className="mt-6 p-4 rounded-lg bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-500/20">
-            <p className="text-neutral-300 text-sm mb-3">
+          <div className="mt-6 p-4 rounded-xl bg-[var(--surface-2)] border border-[var(--border)]">
+            <p className="text-[var(--muted)] text-sm mb-3">
               Prefer email? Drop me a message and I'll get back to you within 24 hours.
             </p>
             <a
               href={`mailto:${contactInfo.email}`}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-black font-semibold rounded-lg transition-colors text-sm"
+              className="inline-flex items-center gap-2 px-4 py-2 accent-badge font-semibold rounded-lg transition-colors text-sm"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />

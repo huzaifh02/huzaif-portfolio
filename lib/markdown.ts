@@ -8,6 +8,7 @@ export interface BlogPost {
   date: string;
   excerpt: string;
   content: string;
+  image?: string;
 }
 
 export async function getBlogPosts(): Promise<BlogPost[]> {
@@ -37,6 +38,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
           date: data.date || '',
           excerpt: data.excerpt || '',
           content: contentHtml,
+          image: data.image || '',
         };
       })
   );
@@ -67,9 +69,9 @@ export async function getBlogPost(slug: string): Promise<BlogPost | null> {
       date: data.date || '',
       excerpt: data.excerpt || '',
       content: contentHtml,
+      image: data.image || '',
     };
   } catch (error) {
     return null;
   }
 }
-

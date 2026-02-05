@@ -16,14 +16,14 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-neutral-950/90 backdrop-blur-md border-b border-neutral-800">
-      <div className="max-w-4xl mx-auto px-6">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[rgba(9,13,18,0.88)] backdrop-blur-md border-b border-[var(--border)]">
+      <div className="max-w-5xl mx-auto px-6">
         <div className="flex justify-between items-center h-16">
           <Link 
             href="/" 
-            className="flex items-center gap-2 text-white font-semibold hover:text-orange-400 transition-colors"
+            className="flex items-center gap-2 text-[var(--foreground)] font-semibold hover:text-[var(--accent)] transition-colors"
           >
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-black font-bold text-sm">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[var(--accent)] to-[var(--accent-strong)] flex items-center justify-center text-[#111010] font-bold text-sm">
               H
             </div>
             <span className="hidden sm:inline">Huzaif Shah</span>
@@ -37,8 +37,8 @@ export default function Navigation() {
                 href={item.path}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                   pathname === item.path
-                    ? 'bg-orange-500/10 text-orange-400'
-                    : 'text-neutral-400 hover:text-white hover:bg-neutral-800'
+                    ? 'bg-[var(--surface-2)] text-[var(--accent)]'
+                    : 'text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--surface-2)]'
                 }`}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,7 +51,7 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors"
+            className="md:hidden p-2 rounded-lg text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--surface-2)] transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -67,7 +67,7 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 space-y-1 border-t border-neutral-800">
+          <div className="md:hidden py-4 space-y-1 border-t border-[var(--border)]">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -75,8 +75,8 @@ export default function Navigation() {
                 onClick={() => setIsOpen(false)}
                 className={`flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all ${
                   pathname === item.path
-                    ? 'bg-orange-500/10 text-orange-400'
-                    : 'text-neutral-400 hover:text-white hover:bg-neutral-800'
+                    ? 'bg-[var(--surface-2)] text-[var(--accent)]'
+                    : 'text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--surface-2)]'
                 }`}
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -25,7 +25,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     <div className="max-w-3xl mx-auto px-6 py-24 md:py-32">
       <Link
         href="/blog"
-        className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-orange-400 mb-12 transition-colors group"
+        className="inline-flex items-center gap-2 text-sm text-[var(--muted)] hover:text-[var(--accent)] mb-12 transition-colors group"
       >
         <svg className="w-4 h-4 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
@@ -35,13 +35,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       <article>
         <header className="mb-12">
-          <div className="flex items-center gap-2 mb-4">
-            <div className="p-1.5 rounded bg-orange-500/10">
-              <svg className="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <time className="text-sm text-orange-400">
+          <div className="flex items-center gap-2 mb-4 text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+            <span>Blog</span>
+            <span className="w-1 h-1 rounded-full bg-[var(--accent)]" />
+            <time>
               {new Date(post.date).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
@@ -49,13 +46,22 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               })}
             </time>
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+          <h1 className="text-3xl md:text-4xl font-display text-[var(--foreground)] mb-4 leading-tight">
             {post.title}
           </h1>
           {post.excerpt && (
-            <p className="text-xl text-neutral-400 leading-relaxed">
+            <p className="text-xl text-[var(--muted)] leading-relaxed">
               {post.excerpt}
             </p>
+          )}
+          {post.image && post.image.trim() !== '' && (
+            <div className="mt-8 rounded-3xl overflow-hidden border border-[var(--border)]">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-72 md:h-96 object-cover"
+              />
+            </div>
           )}
         </header>
 

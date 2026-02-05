@@ -1,10 +1,10 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-neutral-800 bg-neutral-950">
-      <div className="max-w-4xl mx-auto px-6 py-8">
+    <footer className="border-t border-[var(--border)] bg-[rgba(9,13,18,0.95)]">
+      <div className="max-w-5xl mx-auto px-6 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2 text-neutral-500 text-sm">
-            <div className="w-6 h-6 rounded bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-black font-bold text-xs">
+          <div className="flex items-center gap-2 text-[var(--muted)] text-sm">
+            <div className="w-6 h-6 rounded bg-gradient-to-br from-[var(--accent)] to-[var(--accent-strong)] flex items-center justify-center text-[#111010] font-bold text-xs">
               H
             </div>
             <span>© {new Date().getFullYear()} Huzaif Shah</span>
@@ -15,7 +15,7 @@ export default function Footer() {
               href="https://www.linkedin.com/in/mohammad-huzaif-shah-742257237/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-neutral-500 hover:text-orange-400 transition-colors"
+              className="text-[var(--muted)] hover:text-[var(--accent)] transition-colors"
               aria-label="LinkedIn"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -26,7 +26,7 @@ export default function Footer() {
               href="https://www.kubeblogs.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-neutral-500 hover:text-orange-400 transition-colors"
+              className="text-[var(--muted)] hover:text-[var(--accent)] transition-colors"
               aria-label="Website"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -35,7 +35,7 @@ export default function Footer() {
             </a>
             <a
               href="mailto:huzaifh02@gmail.com"
-              className="text-neutral-500 hover:text-orange-400 transition-colors"
+              className="text-[var(--muted)] hover:text-[var(--accent)] transition-colors"
               aria-label="Email"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
