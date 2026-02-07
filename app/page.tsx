@@ -4,20 +4,20 @@ import { getProjects } from '@/lib/content';
 import ProjectCard from '@/components/ProjectCard';
 
 const skills = [
-  { name: 'Kubernetes', icon: '⎈' },
-  { name: 'AWS', icon: '☁️' },
-  { name: 'GCP', icon: '🌐' },
-  { name: 'Terraform', icon: '🏗️' },
-  { name: 'Docker', icon: '🐳' },
-  { name: 'GitHub Actions', icon: '⚡' },
-  { name: 'Prometheus', icon: '📊' },
-  { name: 'Grafana', icon: '📈' },
-  { name: 'Python', icon: '🐍' },
-  { name: 'Helm', icon: '⛵' },
+  { name: 'Kubernetes', icon: '/icons/kubernetes.svg' },
+  { name: 'AWS', icon: '/icons/amazonaws.svg' },
+  { name: 'GCP', icon: '/icons/googlecloud.svg' },
+  { name: 'Terraform', icon: '/icons/terraform.svg' },
+  { name: 'Docker', icon: '/icons/docker.svg' },
+  { name: 'GitHub Actions', icon: '/icons/githubactions.svg' },
+  { name: 'Prometheus', icon: '/icons/prometheus.svg' },
+  { name: 'Grafana', icon: '/icons/grafana.svg' },
+  { name: 'Python', icon: '/icons/python.svg' },
+  { name: 'Helm', icon: '/icons/helm.svg' },
 ];
 
 const highlights = [
-  { value: '3+ yrs', label: 'Platform engineering' },
+  { value: '3+ yrs', label: 'DevOps engineering' },
   { value: '20+ clusters', label: 'Operated & migrated' },
   { value: '120+ pipelines', label: 'CI/CD automation' },
   { value: '99.9%', label: 'Availability focus' },
@@ -25,9 +25,9 @@ const highlights = [
 
 const services = [
   {
-    title: 'Platform Foundations',
+    title: 'Infrastructure Foundations',
     description:
-      'Designing internal platforms that make infrastructure predictable, scalable, and self-serve for product teams.',
+      'Designing infrastructure foundations that make cloud systems predictable, scalable, and self-serve for product teams.',
   },
   {
     title: 'Reliability & Observability',
@@ -55,11 +55,13 @@ const personal = [
     title: 'Football',
     description:
       'I played semi-professionally through school and college. The discipline still shapes how I run incidents.',
+    image: '/personal/football1.jpeg',
   },
   {
     title: 'Chess',
     description:
       'A 1300-rated chess.com habit that keeps me thinking several moves ahead, just like designing resilient systems.',
+    image: '/personal/chess1.png',
   },
 ];
 
@@ -105,19 +107,19 @@ export default async function Home() {
           </div>
 
           <div className="reveal" style={revealStyle('120ms')}>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full surface-soft text-sm text-[var(--muted)]">
-              <span className="w-2 h-2 rounded-full bg-[var(--accent-cool)] animate-pulse" />
-              Open to new platform challenges
-            </span>
-          </div>
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full surface-soft text-sm text-[var(--muted)]">
+                <span className="w-2 h-2 rounded-full bg-[var(--accent-cool)] animate-pulse" />
+                Open to new DevOps challenges
+              </span>
+            </div>
 
           <div className="space-y-4 reveal" style={revealStyle('180ms')}>
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">Platform Engineer</p>
+            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">DevOps Engineer</p>
             <h1 className="text-4xl md:text-6xl font-display font-semibold text-[var(--foreground)]">
               Huzaif Shah
             </h1>
             <p className="text-lg md:text-xl text-[var(--muted)]">
-              Building calm, resilient <span className="gradient-text">cloud platforms</span> that teams trust.
+              Building calm, resilient <span className="gradient-text">cloud infrastructure</span> that teams trust.
             </p>
             <p className="text-[var(--muted)] max-w-2xl mx-auto">
               I help teams ship with confidence by strengthening Kubernetes foundations, modernizing delivery pipelines,
@@ -169,7 +171,7 @@ export default async function Home() {
                 key={skill.name}
                 className="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-[var(--border)] text-xs text-[var(--foreground)]"
               >
-                <span>{skill.icon}</span>
+                <img src={skill.icon} alt={skill.name} className="w-4 h-4 invert opacity-80" />
                 {skill.name}
               </span>
             ))}
@@ -191,20 +193,34 @@ export default async function Home() {
           </Link>
         </div>
         <div className="grid gap-6">
-          {projects.map((project) => (
+          {projects.slice(0, 5).map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
+        
+        {projects.length > 5 && (
+          <div className="mt-8 text-center">
+            <Link
+              href="/portfolio"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[var(--border)] text-[var(--foreground)] text-sm font-semibold hover:border-[var(--accent)] hover:text-[var(--accent)] transition"
+            >
+              View all {projects.length} projects
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        )}
       </section>
 
       <section className="max-w-5xl mx-auto px-6 py-12 relative">
         <div className="grid md:grid-cols-[1.1fr_0.9fr] gap-10">
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">How I Help</p>
-            <h2 className="text-3xl font-display text-[var(--foreground)] mb-4">Platform clarity for fast teams</h2>
+            <h2 className="text-3xl font-display text-[var(--foreground)] mb-4">DevOps clarity for fast teams</h2>
             <p className="text-[var(--muted)] max-w-lg">
-              I partner with engineering teams to design platforms that are intuitive, observable, and ready for growth.
-              From discovery to delivery, I focus on making infrastructure reliable and easy to ship against.
+              I partner with engineering teams to design infrastructure that is intuitive, observable, and ready for growth.
+              From discovery to delivery, I focus on making cloud systems reliable and easy to ship against.
             </p>
           </div>
           <div className="space-y-4">
@@ -227,7 +243,7 @@ export default async function Home() {
           </div>
           <div>
             <h2 className="text-3xl font-display text-[var(--foreground)]">Videos</h2>
-            <p className="text-sm text-[var(--muted)]">Sharing lessons from platform operations</p>
+            <p className="text-sm text-[var(--muted)]">Sharing lessons from DevOps operations</p>
           </div>
         </div>
 
@@ -274,16 +290,16 @@ export default async function Home() {
 
         <div className="grid md:grid-cols-2 gap-6">
           {personal.map((item) => {
-            const images = item.images ?? [];
+            const images = item.images ?? (item.image ? [item.image] : []);
 
             return (
             <div key={item.title} className="surface-card rounded-3xl overflow-hidden">
               {images.length === 1 && (
-                <div className="h-44 w-full bg-[var(--surface-3)]">
+                <div className="h-56 w-full bg-[var(--surface-3)] flex items-center justify-center p-4">
                   <img
                     src={images[0]}
                     alt={item.title}
-                    className="w-full h-full object-cover"
+                    className="max-h-full max-w-full object-contain rounded-2xl"
                   />
                 </div>
               )}
@@ -319,7 +335,7 @@ export default async function Home() {
           </div>
           <div>
             <h2 className="text-3xl font-display text-[var(--foreground)]">Let’s connect</h2>
-            <p className="text-sm text-[var(--muted)]">Start a conversation about reliability and platform goals</p>
+            <p className="text-sm text-[var(--muted)]">Start a conversation about reliability and infrastructure goals</p>
           </div>
         </div>
 
@@ -334,13 +350,13 @@ export default async function Home() {
             <span className="text-xs text-[var(--muted)]">Let’s connect</span>
           </a>
           <a
-            href="https://www.kubeblogs.com"
+            href="https://github.com/huzaifh02"
             target="_blank"
             rel="noopener noreferrer"
             className="surface-card rounded-2xl p-5 flex items-center justify-between gap-3"
           >
-            <span className="text-sm font-semibold text-[var(--foreground)]">KubeBlogs</span>
-            <span className="text-xs text-[var(--muted)]">Writing & talks</span>
+            <span className="text-sm font-semibold text-[var(--foreground)]">GitHub</span>
+            <span className="text-xs text-[var(--muted)]">Open source</span>
           </a>
           <a
             href="mailto:huzaifh02@gmail.com"

@@ -1,39 +1,50 @@
 [
   {
     "id": "1",
-    "date": "2024-12-02",
-    "title": "Order Management Migration & Platform Miniapps",
-    "description": "Migrated Order-mgmt from ECS to EKS end-to-end with CI/CD. Shipped Platform Miniapps beta enabling team self-service. Created resource isolation in EKS using Taints, Tolerations, and Node Selectors."
+    "date": "2024-12-01",
+    "title": "Self-Hosted Runners & Multi-Cloud CI/CD Optimization",
+    "description": "Implemented self-hosted GitHub Actions runners using Docker-in-Docker principle to solve caching bottlenecks. Runners store cache on the same server, achieving 95% faster builds compared to GitHub's native runners. This solved the caching issues that emerged during the Jenkins to GitHub Actions migration."
   },
   {
     "id": "2",
-    "date": "2024-11-13",
-    "title": "Legacy Miniapps Migration & GitHub Actions Overhaul",
-    "description": "Migrated Legacy Miniapps Application end-to-end from EC2 to ECS with rollback mechanisms and CI/CD. Created unified GH action for KEDA operations. Deployed custom monitoring solution with Prometheus, Alertmanager, and RabbitMQ exporter."
+    "date": "2024-10-15",
+    "title": "Multi-Cloud Deployment Pipeline",
+    "description": "Created a unified GitHub Actions CI/CD pipeline for multi-cloud deployments. Single pipeline handles deployments across both AWS and GCP, with proper input validations and customized workflows. Implemented robust rollback mechanisms ensuring safe deployments across cloud boundaries."
   },
   {
     "id": "3",
-    "date": "2024-09-28",
-    "title": "GKE Implementation & Cloud Functions Migration",
-    "description": "Worked on GKE implementation with KEDA end-to-end including custom monitoring dashboards, alerts (NAT, CPU, MEM, LB), Helm charts, and GitHub Actions. Migrated 387 Cloud Functions from Gen1 to Gen2 with <2min downtime."
+    "date": "2024-09-20",
+    "title": "Kubernetes Resource Isolation & Multi-Environment Management",
+    "description": "Implemented resource-level isolation in Kubernetes clusters using taints and tolerations. Enabled multiple broad environments to run securely in the same cluster while maintaining proper boundaries and resource allocation."
   },
   {
     "id": "4",
     "date": "2024-09-01",
-    "title": "Joined Kubenine Consulting",
-    "description": "Started as Platform Engineer, focusing on Kubernetes platforms, CI/CD engineering, and cloud infrastructure. Began contributing to Kubeblogs and learning Python/Streamlit."
+    "title": "Kubernetes Platform Engineering & Cloud Migrations",
+    "description": "Joined as Platform Engineer focusing on Kubernetes platforms. Led migrations from ECS to Kubernetes and Cloud Run to GKE. Transitioned from Jenkins to GitHub Actions, solving caching challenges and modernizing the CI/CD infrastructure."
   },
   {
     "id": "5",
-    "date": "2024-08-20",
-    "title": "Performance Review - Major Wins",
-    "description": "Delivered high-quality work for large-scale client migrations without missing deadlines. Created a future-ready GitHub Actions pipeline. Expanded skills from DevOps to content creation, business knowledge, and platform engineering."
+    "date": "2023-08-01",
+    "title": "Observability Platform with Prometheus & Grafana",
+    "description": "Implemented comprehensive monitoring solution using Prometheus with service discovery to automatically collect metrics from all services. Integrated with Grafana to create developer-friendly dashboards providing high-level performance overviews and operational insights."
   },
   {
     "id": "6",
+    "date": "2023-06-01",
+    "title": "CI/CD Implementation & Deployment Automation",
+    "description": "Introduced Jenkins-based CI/CD pipeline, eliminating manual builds and deployments. Reduced deployment friction significantly and removed dependency on DevOps team for routine deployments and rollbacks. Implemented automated rollback mechanisms to safely revert to previous versions when needed."
+  },
+  {
+    "id": "7",
+    "date": "2023-03-01",
+    "title": "Infrastructure Cost Optimization with ECS Capacity Providers",
+    "description": "Optimized AWS infrastructure costs by migrating EC2 instances from t3 class to t3g (burstable) instances. Leveraged ECS capacity providers for better resource management. Achieved 35% cost reduction while maintaining performance and reliability."
+  },
+  {
+    "id": "8",
     "date": "2023-01-01",
-    "title": "DevOps Engineer at Guillotine Media",
-    "description": "Supported multiple AWS production environments with 99.9% uptime. Built CI/CD pipelines reducing deployment time by 50%. Migrated stateful workloads from EC2 to ECS using EFS-backed persistence."
+    "title": "Starting the DevOps Journey",
+    "description": "Began as DevOps Engineer working with AWS and Jenkins. Managed production workloads on ECS, focusing on reliability, automation, and infrastructure optimization. Built foundation in cloud infrastructure, containerization, and deployment practices."
   }
 ]
-

@@ -11,7 +11,7 @@ export default function JourneyTimeline({ entries }: JourneyTimelineProps) {
       <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-[var(--accent)] via-[rgba(255,179,71,0.4)] to-transparent" />
       
       <div className="space-y-8">
-        {entries.map((entry, index) => (
+        {entries.map((entry) => (
           <article key={entry.id} className="relative pl-16 group">
             {/* Timeline dot */}
             <div className="absolute left-4 top-2 w-5 h-5 rounded-full bg-[var(--surface-3)] border-2 border-[var(--accent)] group-hover:bg-[var(--accent)] transition-colors">

@@ -17,8 +17,8 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Huzaif Shah | Platform Engineer",
-  description: "Platform Engineer with 3+ years of experience designing, building, and operating internal platforms on AWS and GCP. Specializing in Kubernetes, CI/CD, and observability.",
+  title: "Huzaif Shah | DevOps Engineer",
+  description: "DevOps Engineer with 3+ years of experience designing, building, and operating cloud infrastructure on AWS and GCP. Specializing in Kubernetes, CI/CD, and observability.",
 };
 
 export default function RootLayout({

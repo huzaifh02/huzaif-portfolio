@@ -21,12 +21,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     <article className="group surface-card rounded-3xl overflow-hidden transition-all">
       {/* Project Image */}
       {hasImage && (
-        <div className="relative w-full h-48 bg-[var(--surface-3)] overflow-hidden">
+        <div className="relative w-full aspect-[16/9] bg-[var(--surface-3)] overflow-hidden">
           {!imageError ? (
             <img
               src={isImageUrl(project.image) ? project.image : project.image}
               alt={project.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
               onError={() => setImageError(true)}
             />
           ) : (

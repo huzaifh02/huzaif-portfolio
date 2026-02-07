@@ -1,32 +1,82 @@
 [
   {
     "id": "1",
-    "title": "Terraform for Cloud State Management",
-    "description": "Provisioned AWS infrastructure (VPCs, EC2, S3, Elasticache, Amazon MQ, Beanstalk, CloudFront) using Terraform for efficient cloud state management.",
-    "tags": ["Terraform", "AWS", "Infrastructure as Code"],
-    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop",
-    "link": "https://huzaifh02.hashnode.dev/terraform-for-cloud-state-management-simplifying-infrastructure-as-code#heading-architecture-and-tools-used"
+    "title": "Resource-Level Isolation in Kubernetes",
+    "description": "How to achieve resource-level isolation in Kubernetes using a multi-environment node pool strategy for enterprise clusters.",
+    "tags": ["Kubernetes", "Multi-tenancy", "Node Pools", "Isolation"],
+    "image": "https://www.kubeblogs.com/content/images/size/w1200/2026/01/chieve-Resource-Level-Isolation-in-Kubernetes-Multi-Environment-Node-Pool-Strategy-for-Enterprise-Clusters1-1.jpg",
+    "link": "https://www.kubeblogs.com/how-to-achieve-resource-level-isolation-in-kubernetes-using-a-multi-environment-node-pool-strategy/"
   },
   {
     "id": "2",
-    "title": "CI/CD DevSecOps Pipeline",
-    "description": "Developed a comprehensive CI/CD pipeline with Jenkins, integrating Trivy, SonarQube, Docker, Kubernetes, and Grafana for DevOps and monitoring.",
-    "tags": ["Jenkins", "Docker", "Kubernetes", "Grafana", "DevSecOps"],
-    "image": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&h=400&fit=crop",
-    "link": "https://huzaifh02.hashnode.dev/complete-cicd-using-jenkins-devsecops-project-with-sonar-nexus-docker-kubernetes-and-monitoring-tools"
+    "title": "Custom Healthy Backend Metric in GCP",
+    "description": "Creating a custom healthy backend count metric in GCP to fix the AWS HealthyHostCount gap. Essential for multi-cloud observability.",
+    "tags": ["GCP", "Monitoring", "Cloud", "Observability"],
+    "image": "https://www.kubeblogs.com/content/images/size/w1200/2025/12/How-to-Create-a-Custom-Healthy-Backend-Count-Metric-in-GCP1-1.jpg",
+    "link": "https://www.kubeblogs.com/how-to-create-a-custom-healthy-backend-count-metric-in-gcp-fixing-the-aws-healthyhostcount-gap/"
   },
   {
     "id": "3",
-    "title": "Platform Miniapps (Beta)",
-    "description": "Built internal Platform Miniapps using Streamlit to enable teams to self-manage operational workflows and Kubernetes operations.",
-    "tags": ["Python", "Streamlit", "Kubernetes", "Platform Engineering"],
-    "image": ""
+    "title": "AWS Lambda CI/CD with GitHub Actions",
+    "description": "Complete CI/CD automation guide for deploying AWS Lambda functions using GitHub Actions. From code to production in minutes.",
+    "tags": ["AWS Lambda", "GitHub Actions", "Serverless", "CI/CD"],
+    "image": "https://www.kubeblogs.com/content/images/size/w1200/2025/09/Compliance-and-Security-with-AWS-Backup-1.jpg",
+    "link": "https://www.kubeblogs.com/how-to-deploy-aws-lambda-functions-using-github-actions-complete-ci-cd-automation-guide/"
   },
   {
     "id": "4",
-    "title": "Custom Monitoring & Alerting Platform",
-    "description": "Designed and deployed custom monitoring solution involving Prometheus, Alertmanager, RabbitMQ exporter on production clusters with Grafana dashboards.",
-    "tags": ["Prometheus", "Alertmanager", "Grafana", "Observability"],
-    "image": ""
+    "title": "Secure App Exposure with Cloudflare Tunnel",
+    "description": "Step-by-step guide on securely exposing applications using Cloudflare Tunnel, eliminating the need for public IPs and reducing attack surface.",
+    "tags": ["Cloudflare", "Security", "Networking", "Zero Trust"],
+    "image": "https://www.kubeblogs.com/content/images/size/w1200/2025/11/Securely-Expose-Your-Applications-Using-Cloudflare-Tunnel--Step-by-Step-Guide-5.jpg",
+    "link": "https://www.kubeblogs.com/how-to-securely-expose-your-applications-using-cloudflare-tunnel-step-by-step-guide/"
+  },
+  {
+    "id": "5",
+    "title": "Secure Container Deployment Without SSH",
+    "description": "How to deploy new container images in a VM without SSH access. Secure deployment patterns for production environments.",
+    "tags": ["Docker", "Security", "Deployment", "Containers"],
+    "image": "https://www.kubeblogs.com/content/images/size/w1200/2025/10/vm--1-.jpg",
+    "link": "https://www.kubeblogs.com/how-to-deploy-new-images-in-a-vm-without-ssh-secure-container-deployment/"
+  },
+  {
+    "id": "6",
+    "title": "AWS Graviton Cost Optimization",
+    "description": "How choosing the right AWS instances can cut cloud costs in half. Deep dive into the Graviton advantage and migration strategies.",
+    "tags": ["AWS", "Cost Optimization", "Graviton", "EC2"],
+    "image": "https://www.kubeblogs.com/content/images/size/w1200/2025/08/aws3--1-.jpg",
+    "link": "https://www.kubeblogs.com/how-choosing-the-right-aws-instances-can-cut-your-cloud-bill-in-half-the-graviton-advantage/"
+  },
+  {
+    "id": "7",
+    "title": "Enterprise AWS Backup Implementation",
+    "description": "Comprehensive guide on AWS Backup with compliance policies, monitoring, and data protection strategies for enterprise environments.",
+    "tags": ["AWS", "Backup", "Compliance", "Data Protection"],
+    "image": "https://www.kubeblogs.com/content/images/size/w1200/2025/09/Compliance-and-Security-with-AWS-Backup.jpg",
+    "link": "https://www.kubeblogs.com/enterprise-aws-backup-implementation-compliance-policies-monitoring-and-data-protection/"
+  },
+  {
+    "id": "8",
+    "title": "EC2 vs Fargate: The Right Choice",
+    "description": "Detailed comparison of EC2 and Fargate for container workloads. When to use each and how to optimize for cost and performance.",
+    "tags": ["AWS", "ECS", "Fargate", "Containers"],
+    "image": "https://www.kubeblogs.com/content/images/size/w1200/2025/07/audio-to-text--1-.png",
+    "link": "https://www.kubeblogs.com/ec2-or-fargate/"
+  },
+  {
+    "id": "9",
+    "title": "Local GitHub Actions Testing with Act",
+    "description": "How to test GitHub Actions workflows locally using Act, saving time and reducing failed workflow runs in CI/CD pipelines.",
+    "tags": ["GitHub Actions", "CI/CD", "DevOps", "Testing"],
+    "image": "https://www.kubeblogs.com/content/images/size/w1200/2025/06/CUT-CLUSTER-COSTS-WITH-SNORLAX--1-.png",
+    "link": "https://www.kubeblogs.com/act-for-github-actions/"
+  },
+  {
+    "id": "10",
+    "title": "Avoiding GitHub Token Rate Limiting",
+    "description": "Complete guide for DevOps teams on avoiding GitHub token rate limiting issues. Best practices for token management and API usage.",
+    "tags": ["GitHub", "DevOps", "API", "Best Practices"],
+    "image": "https://www.kubeblogs.com/content/images/size/w1200/2025/09/G2CM_FI039_Learn_Article_Images--Public_key_encryption-_V1a-1.jpg",
+    "link": "https://www.kubeblogs.com/how-to-avoid-github-token-rate-limiting-issues-complete-guide-for-devops-teams/"
   }
 ]
