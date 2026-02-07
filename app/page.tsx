@@ -150,7 +150,6 @@ export default async function Home() {
 
           <div className="flex flex-wrap justify-center gap-3 text-xs text-[var(--muted)] reveal" style={revealStyle('300ms')}>
             <span className="surface-soft px-4 py-2 rounded-full">Kashmir, India</span>
-            <span className="surface-soft px-4 py-2 rounded-full">Available March 2026</span>
           </div>
         </div>
 

@@ -28,10 +28,6 @@ export default async function PortfolioPage() {
         <div>
           <p className="text-lg font-display text-[var(--foreground)]">DevOps Engineer</p>
           <p className="text-sm text-[var(--muted)]">Kashmir, India</p>
-            <div className="flex items-center gap-2 mt-2 text-xs text-[var(--muted)]">
-              <span className="w-2 h-2 rounded-full bg-[var(--accent-cool)]" />
-              Available March 2026
-            </div>
           </div>
         </div>
       </div>
