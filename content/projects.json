@@ -20,7 +20,7 @@
     "title": "AWS Lambda CI/CD with GitHub Actions",
     "description": "Complete CI/CD automation guide for deploying AWS Lambda functions using GitHub Actions. From code to production in minutes.",
     "tags": ["AWS Lambda", "GitHub Actions", "Serverless", "CI/CD"],
-    "image": "https://www.kubeblogs.com/content/images/size/w1200/2025/09/Compliance-and-Security-with-AWS-Backup-1.jpg",
+    "image": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=800&h=450&fit=crop",
     "link": "https://www.kubeblogs.com/how-to-deploy-aws-lambda-functions-using-github-actions-complete-ci-cd-automation-guide/"
   },
   {
