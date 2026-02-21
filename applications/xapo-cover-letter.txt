@@ -1,0 +1,46 @@
+Huzaif Shah
+huzaifh02@gmail.com
+linkedin.com/in/mohammad-huzaif-shah-742257237
+huzaif.cloud | kubeblogs.com
+India (UTC+5:30)
+
+--------------------------------------------------------------------------------
+
+Application: Platform Engineer
+
+Dear Hiring Team,
+
+I am applying for the Platform Engineer position at Xapo.
+
+I am a Platform Engineer with 2+ years of experience building and maintaining cloud-native platforms on AWS and GCP. My focus is on expanding self-service capabilities, automating manual processes, and improving developer efficiency—exactly what this role is about.
+
+
+What I bring:
+
+Migrations & Kubernetes
+I've led migrations from EC2 → EKS and AWS → GCP (GKE), and operated Kubernetes clusters with resource isolation using node pools, taints, and tolerations. I configured autoscaling with KEDA to handle variable workloads.
+
+Terraform & Infrastructure
+I write reusable Terraform modules for ECS, Kubernetes, networking, IAM, and monitoring. I focus on consistency and production-ready guardrails.
+
+Automation
+I've built GitHub Actions workflows for deployments, validation, and rollback strategies—reducing manual toil and letting developers ship faster.
+
+Security
+I've managed customer KMS keys with strict IAM scopes, implemented WAF and Cloud Armor, and set up OAuth2 proxy for internal applications.
+
+Monitoring
+I've set up Prometheus, Alertmanager, and Grafana dashboards, and built Python-based metric exporters to fill observability gaps.
+
+
+Why Xapo:
+
+I'm drawn to Xapo's mission around economic freedom and the fully remote, distributed culture. I've worked remotely for 2+ years with async communication and am comfortable with on-call rotations.
+
+I think beyond the immediate fix—I look for ways to prevent future manual work and make platforms easier for developers to use.
+
+My CV is attached. Thank you for considering my application.
+
+
+Kind regards,
+Huzaif Shah
