@@ -1,5 +1,17 @@
 [
   {
+    "id": "9",
+    "date": "2026-08-31",
+    "title": "Diagnosing Kubernetes Traffic Skew on EKS",
+    "description": "Investigated a live EKS workload where one pod saturated CPU while identical replicas sat idle. Measured the skew with Prometheus and Grafana, showed why HPA scale-out made the bill worse, and published a 3-tier fix covering connection recycling, kube-proxy IPVS, and Layer 7 gateway routing."
+  },
+  {
+    "id": "10",
+    "date": "2026-08-14",
+    "title": "Read-Only AI Agent for DevOps Lookups and Triage",
+    "description": "Shipped a Slack-based DevOps agent for config lookups and first-pass incident triage. Kept the model inside a deterministic security layer with read-only cloud credentials, command guards, and GitOps as the knowledge base so improving the agent is a pull request."
+  },
+  {
     "id": "1",
     "date": "2024-12-01",
     "title": "Self-Hosted Runners & Multi-Cloud CI/CD Optimization",

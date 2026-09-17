@@ -1,5 +1,21 @@
 [
   {
+    "id": "11",
+    "title": "Kubernetes Traffic Skew: Why One Pod Gets Hot While Others Sit Idle",
+    "description": "Reproduced hot-pod traffic skew on a live EKS cluster: one replica at 90% CPU while identical pods sat idle, then HPA scaled waste. Broke down kube-proxy Layer 4 routing with keep-alive, and the 3-tier fix—connection recycling, IPVS least-connection, and Layer 7 gateway routing.",
+    "tags": ["Kubernetes", "EKS", "kube-proxy", "Autoscaling", "Observability"],
+    "image": "https://storage.ghost.io/c/3d/8d/3d8d3fc6-1cfb-4dae-9d5e-b53f28dc1ebd/content/images/size/w1200/2026/08/kubernetes-traffic-skew-hot-pod.png-2.jpg",
+    "link": "https://www.kubeblogs.com/kubernetes-traffic-skew-why-one-pod-gets-hot-while-others-sit-idle/"
+  },
+  {
+    "id": "12",
+    "title": "We Built an AI Agent for DevOps. Here's What Actually Worked",
+    "description": "A read-only Slack agent for infrastructure lookups and first-pass incident triage, running for nine months. The model never is the security boundary: GitOps as the knowledge base, read-only cloud credentials, command guards, and playbooks that improve the agent through pull requests.",
+    "tags": ["AI", "DevOps", "Platform Engineering", "GitOps", "Security"],
+    "image": "https://storage.ghost.io/c/3d/8d/3d8d3fc6-1cfb-4dae-9d5e-b53f28dc1ebd/content/images/size/w1200/2026/08/AI-agent-for-DevOps-infrastructure-lookups-and-incident-triage.jpg",
+    "link": "https://www.kubeblogs.com/ai-agent-for-devops-what-actually-worked/"
+  },
+  {
     "id": "1",
     "title": "Resource-Level Isolation in Kubernetes",
     "description": "How to achieve resource-level isolation in Kubernetes using a multi-environment node pool strategy for enterprise clusters.",
